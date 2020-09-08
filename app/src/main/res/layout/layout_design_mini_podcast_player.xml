@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="24dp"
+    app:cardBackgroundColor="@color/colorMedia">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/exo_position"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:text="05:15"
+            android:textColor="@color/colorGrey"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/exo_progress_placeholder"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/exo_progress_placeholder" />
+
+        <ProgressBar
+            android:id="@+id/exo_progress_placeholder"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:progress="70"
+            android:progressTint="@color/colorProgress"
+            app:layout_constraintEnd_toStartOf="@+id/exo_duration"
+            app:layout_constraintStart_toEndOf="@id/exo_position"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/exo_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:text="18:51"
+            android:textColor="@color/colorProgress"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/exo_progress_placeholder"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/exo_progress_placeholder" />
+
+        <LinearLayout
+            android:id="@+id/podcast_controller_ll"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/exo_progress_placeholder">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imvForwardOne"
+                android:layout_width="0dp"
+                android:layout_height="28dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="8dp"
+                android:layout_weight="0.2"
+                android:src="@drawable/ic_one_plus" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                style="@style/ExoMediaButton.Rewind"
+                android:id="@+id/exo_rew"
+                android:layout_width="0dp"
+                android:layout_height="28dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="8dp"
+                android:layout_weight="0.2"
+                android:contentDescription="@string/exo_controls_rewind_description"
+                android:src="@drawable/ic_baseline_replay_10_24" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                style="@style/ExoMediaButton.Play"
+                android:id="@+id/exo_play"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="8dp"
+                android:layout_weight="0.15"
+                android:contentDescription="@string/exo_controls_play_description"
+                android:background="@drawable/layout_image_view_design"
+                android:src="@drawable/ic_baseline_play_arrow_24" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                style="@style/ExoMediaButton.Pause"
+                android:id="@+id/exo_pause"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="8dp"
+                android:layout_weight="0.15"
+                android:contentDescription="@string/exo_controls_pause_description"
+                android:background="@drawable/layout_image_view_design"
+                android:src="@drawable/ic_baseline_pause_24" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/exo_ffwd"
+                style="@style/ExoMediaButton.FastForward"
+                android:layout_width="0dp"
+                android:layout_height="28dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="8dp"
+                android:layout_weight="0.2"
+                android:contentDescription="@string/exo_controls_fastforward_description"
+                android:src="@drawable/ic_baseline_forward" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imvSleep"
+                android:layout_width="0dp"
+                android:layout_height="28dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="8dp"
+                android:layout_weight="0.2"
+                android:src="@drawable/ic_baseline_snooze" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

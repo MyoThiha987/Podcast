@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">PADC_Podcast</string>
+    <string name="podcast">Podcast</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="text_desc">"I love Medium's membership — it gives me access to the stories I love by the writers I love, and it allows me to help support those writers financially"</string>
+    <string name="art_design"><![CDATA[Art & Design]]></string>
+    <string name="your_shows"><b>Your</b> Shows</string>
+    <string name="podcast_title">Designing for everyone,everywhere with Yosef</string>
+    <string name="time">12 m</string>
+    <string name="podcast_body">"I love by the writers I love, and it allows me to help support those writers financially.I love Medium's membership — it gives me access to the stories I love by the writers I love, and it allows me to help support those writers financially.I love Medium's membership  "</string>
+    <string name="home_fragment">Home</string>
+    <string name="search_fragment">Search</string>
+    <string name="download_fragment">Download</string>
+    <string name="profile_fragment">Profile</string>
+
+</resources>

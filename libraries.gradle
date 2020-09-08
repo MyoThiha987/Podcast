@@ -1,0 +1,50 @@
+ext{
+    glideVersion = "4.11.0"
+    room_version = "2.2.3"
+    lifecycle_version = "2.2.0"
+    swiperefresh_version = "1.1.0"
+    workmanager_version = "2.4.0"
+    chunk_version = "1.1.0"
+    loggingInterceptor_version = "4.7.2"
+    slider_version = "1.3.2"
+    simpleDate_version = "2.1.0"
+    youtubePlayerView_version = "10.0.5"
+    gson_version = "2.8.6"
+    retrofit_version = "2.6.2"
+    rxKotlin_version = "2.4.0"
+    rxandroid_version = "2.1.1"
+    fastlist_version = "1.4"
+    material_version = "1.2.0-alpha04"
+    recyclerview_version = "1.2.0-alpha05"
+    bounceRecycler_version = "0.1.1"
+
+    libraries = [
+            glide : "com.github.bumptech.glide:glide:$glideVersion",
+            glideCompiler : "com.github.bumptech.glide:compiler:$glideVersion",
+            livedata : "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version",
+            viewmodel : "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version",
+            archlifecycleExtension : "android.arch.lifecycle:extensions:$lifecycle_version",
+            archlifecycleCompiler : "android.arch.lifecycle:compiler:$lifecycle_version",
+            lifecycleCompiler : "androidx.lifecycle:lifecycle-compiler:$lifecycle_version",
+            room : "androidx.room:room-runtime:$room_version",
+            roomCompiler : "androidx.room:room-compiler:$room_version",
+            swiperefreshlayout: "androidx.swiperefreshlayout:swiperefreshlayout:$swiperefresh_version",
+            workmanger: "androidx.work:work-runtime:$workmanager_version",
+            chunkDebug : "com.readystatesoftware.chuck:library:$chunk_version",
+            chunkRelease : "com.readystatesoftware.chuck:library-no-op:$chunk_version",
+            loggingInterceptor : "com.squareup.okhttp3:logging-interceptor:$loggingInterceptor_version",
+            slider : "com.github.smarteist:autoimageslider:$slider_version",
+            simpleDate : "com.github.sidhuparas:SimpleDate:$simpleDate_version",
+            youtubePlayerView : "com.pierfrancescosoffritti.androidyoutubeplayer:core:$youtubePlayerView_version",
+            gson : "com.google.code.gson:gson:$gson_version",
+            retrofit : "com.squareup.retrofit2:retrofit:$retrofit_version",
+            retrofitAdapter : "com.squareup.retrofit2:adapter-rxjava2:$retrofit_version",
+            retrofitConverter : "com.squareup.retrofit2:converter-gson:$retrofit_version",
+            rxKotlin : "io.reactivex.rxjava2:rxkotlin:$rxKotlin_version",
+            rxAndroid : "io.reactivex.rxjava2:rxandroid:$rxandroid_version",
+            fastlist : "bg.devlabs.fastlist:fast-list:$fastlist_version",
+            material : "com.google.android.material:material:$material_version",
+            recyclerview : "androidx.recyclerview:recyclerview:$recyclerview_version",
+            bounceRecyclerView : "com.chauthai.overscroll:overscroll-bouncy:$bounceRecycler_version"
+    ]
+}
