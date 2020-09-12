@@ -14,5 +14,5 @@ interface UpNextPodcastsDelegate {
 }
 
 interface DownLoadedPodcastDelegate{
-    fun onTapDownloadedItem()
+    fun onTapDownloadedItem(podcastId: String)
 }

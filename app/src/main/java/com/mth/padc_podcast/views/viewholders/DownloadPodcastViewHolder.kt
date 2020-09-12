@@ -9,7 +9,18 @@ import com.mth.shared.views.viewholders.BaseViewHolder
 import kotlinx.android.synthetic.main.fragment_search.view.*
 import kotlinx.android.synthetic.main.layout_item_podcast_download.view.*
 
-class DownloadPodcastViewHolder(itemView: View) : BaseViewHolder<DownloadPodcastVO>(itemView) {
+class DownloadPodcastViewHolder(itemView: View, private val delegate: DownLoadedPodcastDelegate) :
+    BaseViewHolder<DownloadPodcastVO>(itemView) {
+    init {
+        itemView.cl.setOnClickListener {
+            mData?.let {
+                delegate.onTapDownloadedItem(it.podcast.pid)
+
+            }
+        }
+
+
+    }
 
     override fun bindData(data: DownloadPodcastVO) {
         mData = data

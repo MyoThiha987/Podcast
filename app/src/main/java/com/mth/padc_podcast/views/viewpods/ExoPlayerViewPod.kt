@@ -5,7 +5,6 @@ import android.net.Uri
 import android.util.AttributeSet
 import com.google.android.exoplayer2.SimpleExoPlayer
 import com.google.android.exoplayer2.ui.PlayerControlView
-import com.mth.padc_podcast.root.App.Companion.simpleExoplayer
 import com.mth.padc_podcast.utils.ExoPlayerEventListener
 import com.mth.padc_podcast.utils.buildMediaSource
 import com.mth.padc_podcast.utils.load
@@ -22,6 +21,7 @@ class ExoPlayerViewPod @JvmOverloads constructor(
     private var currentWindow = 0
     private var playbackPosition: Long = 0
     private val exoPlayerEventListener = ExoPlayerEventListener()
+    var simpleExoplayer: SimpleExoPlayer? = null
 
     override fun onFinishInflate() {
         super.onFinishInflate()
@@ -29,6 +29,7 @@ class ExoPlayerViewPod @JvmOverloads constructor(
     }
 
     private fun initializePlayer() {
+        simpleExoplayer = SimpleExoPlayer.Builder(context).build()
         home_music_player.player = simpleExoplayer
     }
 

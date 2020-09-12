@@ -197,10 +197,11 @@
         android:layout_width="match_parent"
         android:layout_height="120dp"
         app:show_timeout="0"
+        app:rewind_increment="10000"
+        app:fastforward_increment="30000"
         android:layout_marginBottom="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        app:use_controller="false"
         app:layout_constraintBottom_toBottomOf="parent"
         tools:layout_editor_absoluteX="8dp" />
 

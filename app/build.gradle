@@ -37,9 +37,9 @@ android {
 
     productFlavors {
         def BASE_URL_FIELD = "BASE_URL_FIELD"
-        def BASE_URL_DEV = "\"https://f14a55d7-efe5-450f-bd1e-0fa59366c5f5.mock.pstmn.io/\""
-        def BASE_URL_PROD = "\"https://f14a55d7-efe5-450f-bd1e-0fa59366c5f5.mock.pstmn.io/\""
-        def BASE_URL_ASSEMBLE = "\"https://f14a55d7-efe5-450f-bd1e-0fa59366c5f5.mock.pstmn.io/\""
+        def BASE_URL_DEV = "\"https://241a8204-b384-4747-8254-deba5c900d77.mock.pstmn.io/\""
+        def BASE_URL_PROD = "\"https://241a8204-b384-4747-8254-deba5c900d77.mock.pstmn.io/\""
+        def BASE_URL_ASSEMBLE = "\"https://241a8204-b384-4747-8254-deba5c900d77.mock.pstmn.io/\""
 
         flavorDimensions "appModule"
         dev {
@@ -143,7 +143,7 @@ dependencies {
 //    implementation 'com.google.android.exoplayer:exoplayer-ui:2.10.0'
 
     implementation 'com.google.android.exoplayer:exoplayer:2.11.8'
-
+    implementation "com.airbnb.android:lottie:3.4.2"
 
 
     //local Unit Test

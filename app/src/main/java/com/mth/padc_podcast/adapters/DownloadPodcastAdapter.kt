@@ -12,10 +12,10 @@ import com.mth.padc_podcast.views.viewholders.SearchPodcastViewHolder
 import com.mth.shared.adapters.BaseRecyclerAdapter
 import com.mth.shared.views.viewholders.BaseViewHolder
 
-class DownloadPodcastAdapter : BaseRecyclerAdapter<BaseViewHolder<DownloadPodcastVO>,DownloadPodcastVO>(){
+class DownloadPodcastAdapter(private val delegate : DownLoadedPodcastDelegate) : BaseRecyclerAdapter<BaseViewHolder<DownloadPodcastVO>,DownloadPodcastVO>(){
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BaseViewHolder<DownloadPodcastVO> {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.layout_item_podcast_download,parent,false)
-        return DownloadPodcastViewHolder(view)
+        return DownloadPodcastViewHolder(view,delegate)
     }
 
 }

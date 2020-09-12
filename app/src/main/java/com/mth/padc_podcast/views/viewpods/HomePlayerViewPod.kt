@@ -2,7 +2,7 @@ package com.mth.padc_podcast.views.viewpods
 
 import android.content.Context
 import android.util.AttributeSet
-import com.google.android.material.card.MaterialCardView
+import androidx.constraintlayout.widget.ConstraintLayout
 import com.mth.padc_podcast.utils.load
 import kotlinx.android.synthetic.main.home_exo_player_viewpod.view.*
 
@@ -10,7 +10,7 @@ class HomePlayerViewPod @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
     defStyleAttr: Int = 0
-) : MaterialCardView(context, attrs, defStyleAttr) {
+) : ConstraintLayout(context, attrs, defStyleAttr) {
 
 
     override fun onFinishInflate() {

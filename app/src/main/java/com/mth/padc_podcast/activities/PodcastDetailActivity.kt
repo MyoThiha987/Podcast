@@ -5,16 +5,13 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Html
-import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.lifecycle.ViewModelProviders
 import com.google.android.exoplayer2.Player
-import com.google.android.exoplayer2.SimpleExoPlayer
 import com.mth.padc_podcast.R
 import com.mth.padc_podcast.data.vos.PodcastDetailVO
 import com.mth.padc_podcast.mvp.presenters.PodcastDetailPresenter
 import com.mth.padc_podcast.mvp.presenters.impls.PodcastDetailPresenterImpl
 import com.mth.padc_podcast.mvp.views.PodcastDetailView
-import com.mth.padc_podcast.root.App
 import com.mth.padc_podcast.utils.load
 import com.mth.padc_podcast.views.viewpods.MiniExoPlayerViewPod
 import com.mth.shared.mvp.views.BaseView
@@ -63,13 +60,12 @@ class PodcastDetailActivity : AppCompatActivity(),PodcastDetailView,Player.Event
         mExoplayerViewPod.setData(podcastDetailVO.audio)
     }
 
-
-
-    override fun onResume() {
+    /*override fun onResume() {
         super.onResume()
         App.simpleExoplayer = SimpleExoPlayer.Builder(App.context).build()
-
     }
+
+     */
 
 
 }

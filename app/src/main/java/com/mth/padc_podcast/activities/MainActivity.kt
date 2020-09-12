@@ -3,13 +3,11 @@ package com.mth.padc_podcast.activities
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import com.google.android.exoplayer2.SimpleExoPlayer
 import com.mth.padc_podcast.R
 import com.mth.padc_podcast.fragments.DownloadFragment
 import com.mth.padc_podcast.fragments.HomeFragment
 import com.mth.padc_podcast.fragments.ProfileFragment
 import com.mth.padc_podcast.fragments.SearchFragment
-import com.mth.padc_podcast.root.App.Companion.simpleExoplayer
 import kotlinx.android.synthetic.main.activity_main.*
 
 
@@ -73,10 +71,7 @@ class MainActivity : AppCompatActivity() {
         activeFragment = fragment
     }
 
-    override fun onDestroy() {
-        super.onDestroy()
-        simpleExoplayer?.release()
-    }
+
 
 
 

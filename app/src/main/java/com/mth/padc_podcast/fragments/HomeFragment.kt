@@ -170,7 +170,7 @@ class HomeFragment : BaseFragment(), HomePodcastView, Player.EventListener {
 
     override fun onDestroy() {
         super.onDestroy()
-        App.simpleExoplayer?.release()
+        mExoplayerViewPod.releasePlayer()
     }
 
 

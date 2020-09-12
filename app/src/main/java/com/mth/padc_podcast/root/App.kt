@@ -12,7 +12,7 @@ class App : Application() {
 
     companion object{
         lateinit var context : Context
-        var simpleExoplayer: SimpleExoPlayer? = null
+        //var simpleExoplayer: SimpleExoPlayer? = null
     }
 
     override fun onCreate() {
@@ -22,7 +22,7 @@ class App : Application() {
         RxJavaPlugins.setErrorHandler { throwable ->
             run { Log.d("RX error : ", "Rx error : ${throwable.localizedMessage}") } }
         PodcastsModelImpl.initDatabase(context)
-        simpleExoplayer = SimpleExoPlayer.Builder(context).build()
+        //simpleExoplayer = SimpleExoPlayer.Builder(context).build()
 
 
     }

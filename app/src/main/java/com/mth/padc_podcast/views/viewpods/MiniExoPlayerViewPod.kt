@@ -21,6 +21,7 @@ class MiniExoPlayerViewPod @JvmOverloads constructor(
     private var currentWindow = 0
     private var playbackPosition: Long = 0
     private val exoPlayerEventListener = ExoPlayerEventListener()
+    var simpleExoplayer: SimpleExoPlayer? = null
 
     override fun onFinishInflate() {
         super.onFinishInflate()
@@ -28,25 +29,27 @@ class MiniExoPlayerViewPod @JvmOverloads constructor(
     }
 
     private fun initializePlayer() {
-        include.player = App.simpleExoplayer
+        simpleExoplayer = SimpleExoPlayer.Builder(context).build()
+        include.player = simpleExoplayer
     }
 
     fun releasePlayer() {
-        if (App.simpleExoplayer != null) {
-            playWhenReady = App.simpleExoplayer!!.playWhenReady
-            playbackPosition = App.simpleExoplayer!!.currentPosition
-            currentWindow = App.simpleExoplayer!!.currentWindowIndex
-            App.simpleExoplayer?.removeListener(exoPlayerEventListener)
-            App.simpleExoplayer?.release()
-            App.simpleExoplayer = null
+        if (simpleExoplayer != null) {
+            playWhenReady = simpleExoplayer!!.playWhenReady
+            playbackPosition = simpleExoplayer!!.currentPosition
+            currentWindow = simpleExoplayer!!.currentWindowIndex
+            simpleExoplayer?.removeListener(exoPlayerEventListener)
+            simpleExoplayer?.release()
+            simpleExoplayer = null
         }
     }
 
     fun setData(audioUrl: String) {
-        val mediaSource = buildMediaSource(context, Uri.parse(audioUrl))
-        //App.simpleExoplayer?.playWhenReady = playWhenReady
-        //App.simpleExoplayer?.seekTo(currentWindow, playbackPosition)
-        App.simpleExoplayer?.addListener(exoPlayerEventListener)
-        App.simpleExoplayer?.prepare(mediaSource, false, false)
+        val uri = Uri.parse(audioUrl)
+        val mediaSource = buildMediaSource(context,uri )
+        simpleExoplayer?.playWhenReady = playWhenReady
+        simpleExoplayer?.seekTo(currentWindow, playbackPosition)
+        simpleExoplayer?.addListener(exoPlayerEventListener)
+        simpleExoplayer?.prepare(mediaSource, false, false)
     }
 }

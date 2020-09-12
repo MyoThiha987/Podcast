@@ -14,6 +14,10 @@ class DownloadPodcastPresenterImpl : DownloadPodcastPresenter,AbstractBasePresen
         loadDownloadPodcastFromDb(lifecycleOwner)
     }
 
+    override fun onTapDownloadedItem(podcastId: String) {
+        mView?.navigateToDetailScreen(podcastId)
+    }
+
     private fun loadDownloadPodcastFromDb(lifecycleOwner: LifecycleOwner){
         mModel.getAllDownloadPodcastList().observe(lifecycleOwner, Observer {
             it.let {
@@ -22,7 +26,5 @@ class DownloadPodcastPresenterImpl : DownloadPodcastPresenter,AbstractBasePresen
         })
     }
 
-    override fun onTapDownloadedItem() {
-        TODO("Not yet implemented")
-    }
+
 }

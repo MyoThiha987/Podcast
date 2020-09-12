@@ -6,4 +6,6 @@ import com.mth.shared.mvp.views.BaseView
 
 interface DownloadPodcastView : BaseView {
     fun displayDownloadPodcastList(list: List<DownloadPodcastVO>)
+    fun navigateToDetailScreen(podcastId : String)
+
 }

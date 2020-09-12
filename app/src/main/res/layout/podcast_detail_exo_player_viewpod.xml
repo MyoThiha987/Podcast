@@ -1,10 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.mth.padc_podcast.views.viewpods.DetailPlayerViewPod xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="120dp"
+    android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardCornerRadius="24dp"
-    app:cardBackgroundColor="@color/colorMedia">
+    >
+
+    <com.mth.padc_podcast.views.viewpods.DetailPlayerViewPod
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        app:cardCornerRadius="24dp"
+        app:cardBackgroundColor="@color/colorMedia"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -107,9 +115,10 @@
 
         </LinearLayout>
 
-
-
     </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.mth.padc_podcast.views.viewpods.DetailPlayerViewPod>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
 
 
-</com.mth.padc_podcast.views.viewpods.DetailPlayerViewPod>
+
